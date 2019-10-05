@@ -39,5 +39,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>RecipesBaseUrl</key>
+	<string>http://www.recipepuppy.com/api</string>
 </dict>
 </plist>
