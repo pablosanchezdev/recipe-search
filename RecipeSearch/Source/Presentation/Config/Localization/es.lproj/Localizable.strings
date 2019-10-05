@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RecipeSearch
+
+  Created by Pablo Sanchez Egido on 05/10/2019.
+  Copyright © 2019 Pablo Sanchez. All rights reserved.
+*/
+
+"title_label" = "¡Busca entre las mejores recetas!";
+"search_bar_placeholder" = "Nombre de la receta...";
+"error_loading_recipe_image" = "Error al cargar la imagen";

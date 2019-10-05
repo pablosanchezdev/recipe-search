@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesListViewController" customModule="RecipeSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="PHu-oY-okX" id="YSR-pP-ykS"/>
+                <outlet property="searchBar" destination="Qxc-US-vCp" id="iWE-Vl-QSF"/>
+                <outlet property="titleLabel" destination="cSV-bO-tkv" id="vJT-aH-PLx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-bO-tkv">
+                    <rect key="frame" x="12" y="56" width="390" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-US-vCp">
+                    <rect key="frame" x="0.0" y="92" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PHu-oY-okX" userLabel="Recipes Collection View">
+                    <rect key="frame" x="0.0" y="148" width="414" height="748"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="62t-Gi-aZc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Qxc-US-vCp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0f1-QO-nkQ"/>
+                <constraint firstAttribute="bottom" secondItem="PHu-oY-okX" secondAttribute="bottom" id="1ot-kc-ab8"/>
+                <constraint firstItem="PHu-oY-okX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8wj-WV-iTt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cSV-bO-tkv" secondAttribute="trailing" constant="12" id="EpC-yB-Cvp"/>
+                <constraint firstItem="Qxc-US-vCp" firstAttribute="top" secondItem="cSV-bO-tkv" secondAttribute="bottom" constant="12" id="LSp-LS-jAK"/>
+                <constraint firstItem="PHu-oY-okX" firstAttribute="top" secondItem="Qxc-US-vCp" secondAttribute="bottom" id="gnH-Mk-zBL"/>
+                <constraint firstItem="Qxc-US-vCp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mr0-fF-pmp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PHu-oY-okX" secondAttribute="trailing" id="n1U-VL-286"/>
+                <constraint firstItem="cSV-bO-tkv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="sUW-gT-i9U"/>
+                <constraint firstItem="cSV-bO-tkv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="tvD-pV-3tn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
