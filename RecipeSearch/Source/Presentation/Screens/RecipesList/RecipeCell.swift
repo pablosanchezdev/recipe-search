@@ -10,9 +10,9 @@ import UIKit
 import SDWebImage
 
 class RecipeCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var ingredientsLabel: UILabel!
 
     static let height: CGFloat = 80
     

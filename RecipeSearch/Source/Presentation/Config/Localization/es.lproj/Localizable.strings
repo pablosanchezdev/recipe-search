@@ -6,7 +6,11 @@
   Copyright © 2019 Pablo Sanchez. All rights reserved.
 */
 
+// Recipes List
 "title_label" = "¡Busca entre las mejores recetas!";
 "search_bar_placeholder" = "Nombre de la receta...";
 "no_recipes" = "No hay recetas para mostrar";
 "error_loading_recipe_image" = "Sin imagen";
+
+// Recipe Detail
+"web_button_title" = "Ver web";

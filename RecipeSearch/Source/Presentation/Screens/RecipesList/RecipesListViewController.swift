@@ -9,10 +9,10 @@
 import UIKit
 
 class RecipesListViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var searchBar: UISearchBar!
+    @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak private var messageLabel: UILabel!
 
     let presenter: RecipesListPresenterProtocol
     var recipes: [RecipeView] = []

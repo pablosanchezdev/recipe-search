@@ -24,7 +24,7 @@ protocol RecipesListPresenterDelegate: class {
 class RecipesListPresenter {
     weak var delegate: RecipesListPresenterDelegate?
 
-    let repository: RecipeRepository
+    private let repository: RecipeRepository
 
     init(repository: RecipeRepository) {
         self.repository = repository

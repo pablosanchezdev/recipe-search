@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeDetailViewController" customModule="RecipeSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="OzW-CE-2n4" id="Ztw-gl-HFi"/>
+                <outlet property="ingredientsLabel" destination="UnF-yi-9qx" id="0G1-vH-rHn"/>
+                <outlet property="titleLabel" destination="AVw-In-Zfe" id="Eho-4e-5Yl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webButton" destination="GQF-U1-YAR" id="dQA-Lo-xBY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OzW-CE-2n4">
+                    <rect key="frame" x="0.0" y="44" width="375" height="280.33333333333331"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OzW-CE-2n4" secondAttribute="height" multiplier="107:80" id="c8r-Aq-BtC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVw-In-Zfe" userLabel="Title Label">
+                    <rect key="frame" x="16" y="340.33333333333331" width="343" height="28.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-yi-9qx" userLabel="Ingredients Label">
+                    <rect key="frame" x="16" y="409" width="343" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-U1-YAR">
+                    <rect key="frame" x="112.66666666666669" y="726" width="150" height="36"/>
+                    <color key="backgroundColor" red="0.61542607569999996" green="0.83743780850000005" blue="0.38563534939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapWebButton" destination="-1" eventType="touchUpInside" id="RSZ-IQ-WMd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GQF-U1-YAR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8kl-dp-ofq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OzW-CE-2n4" secondAttribute="trailing" id="JZX-el-ngH"/>
+                <constraint firstItem="UnF-yi-9qx" firstAttribute="top" secondItem="AVw-In-Zfe" secondAttribute="bottom" constant="40" id="JsF-U2-I0x"/>
+                <constraint firstItem="GQF-U1-YAR" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="MuM-jO-UCT"/>
+                <constraint firstItem="AVw-In-Zfe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="SCH-0h-csA"/>
+                <constraint firstItem="OzW-CE-2n4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UTR-pt-x1D"/>
+                <constraint firstItem="UnF-yi-9qx" firstAttribute="leading" secondItem="AVw-In-Zfe" secondAttribute="leading" id="ZUP-Kl-4bX"/>
+                <constraint firstItem="UnF-yi-9qx" firstAttribute="trailing" secondItem="AVw-In-Zfe" secondAttribute="trailing" id="b0h-9n-Hlf"/>
+                <constraint firstItem="OzW-CE-2n4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mgR-zZ-qIm"/>
+                <constraint firstItem="AVw-In-Zfe" firstAttribute="top" secondItem="OzW-CE-2n4" secondAttribute="bottom" constant="16" id="tdh-Vd-smZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GQF-U1-YAR" secondAttribute="bottom" constant="16" id="xwm-tP-m7e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AVw-In-Zfe" secondAttribute="trailing" constant="16" id="y0D-aL-7Ly"/>
+                <constraint firstItem="GQF-U1-YAR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UnF-yi-9qx" secondAttribute="bottom" constant="8" id="z2C-Ly-oOy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

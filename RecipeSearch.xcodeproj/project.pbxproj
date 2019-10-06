@@ -23,6 +23,9 @@
 		6E457E532348E42000A3206F /* AppDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E457E512348E42000A3206F /* AppDecoder.swift */; };
 		6E6F1611234A2C4D006278A8 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1610234A2C4D006278A8 /* RecipeView.swift */; };
 		6E6F1613234A2C8D006278A8 /* RecipeViewMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1612234A2C8D006278A8 /* RecipeViewMapper.swift */; };
+		6E6F1617234A422B006278A8 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1615234A422B006278A8 /* RecipeDetailViewController.swift */; };
+		6E6F1618234A422B006278A8 /* RecipeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F1616234A422B006278A8 /* RecipeDetailViewController.xib */; };
+		6E6F161A234A50AF006278A8 /* RecipeDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1619234A50AF006278A8 /* RecipeDetailPresenter.swift */; };
 		6E9C59832348E7EF00402308 /* AlamofireApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9C59822348E7EF00402308 /* AlamofireApiClient.swift */; };
 		6EC6A3D92348F62800E38ADA /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6A3D82348F62800E38ADA /* AppConfig.swift */; };
 		6EC6A3DC2348F6A300E38ADA /* String+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6A3DB2348F6A300E38ADA /* String+Plist.swift */; };
@@ -55,6 +58,9 @@
 		6E457E512348E42000A3206F /* AppDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDecoder.swift; sourceTree = "<group>"; };
 		6E6F1610234A2C4D006278A8 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		6E6F1612234A2C8D006278A8 /* RecipeViewMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewMapper.swift; sourceTree = "<group>"; };
+		6E6F1615234A422B006278A8 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		6E6F1616234A422B006278A8 /* RecipeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailViewController.xib; sourceTree = "<group>"; };
+		6E6F1619234A50AF006278A8 /* RecipeDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPresenter.swift; sourceTree = "<group>"; };
 		6E9C59822348E7EF00402308 /* AlamofireApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireApiClient.swift; sourceTree = "<group>"; };
 		6EC6A3D82348F62800E38ADA /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		6EC6A3DB2348F6A300E38ADA /* String+Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Plist.swift"; sourceTree = "<group>"; };
@@ -263,6 +269,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6E6F1614234A420C006278A8 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6E6F1615234A422B006278A8 /* RecipeDetailViewController.swift */,
+				6E6F1616234A422B006278A8 /* RecipeDetailViewController.xib */,
+				6E6F1619234A50AF006278A8 /* RecipeDetailPresenter.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
 		6E9C59812348E7DE00402308 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				6EC6A3F0234902BB00E38ADA /* RecipesList */,
+				6E6F1614234A420C006278A8 /* RecipeDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -409,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E457E1F2348BE1E00A3206F /* LaunchScreen.storyboard in Resources */,
+				6E6F1618234A422B006278A8 /* RecipeDetailViewController.xib in Resources */,
 				6EC6A3E62348FE9B00E38ADA /* Localizable.strings in Resources */,
 				6EC6A3F4234902DD00E38ADA /* RecipeCell.xib in Resources */,
 				6EC6A3E32348FA8400E38ADA /* RecipesListViewController.xib in Resources */,
@@ -468,6 +486,7 @@
 				6EC6A3E22348FA8400E38ADA /* RecipesListViewController.swift in Sources */,
 				6E457E302348C25A00A3206F /* Recipe.swift in Sources */,
 				6E457E522348E42000A3206F /* AppJsonDecoder.swift in Sources */,
+				6E6F1617234A422B006278A8 /* RecipeDetailViewController.swift in Sources */,
 				6E6F1613234A2C8D006278A8 /* RecipeViewMapper.swift in Sources */,
 				6E6F1611234A2C4D006278A8 /* RecipeView.swift in Sources */,
 				6EC6A3F3234902DD00E38ADA /* RecipeCell.swift in Sources */,
@@ -481,6 +500,7 @@
 				6EC6A3DC2348F6A300E38ADA /* String+Plist.swift in Sources */,
 				6EC6A3F62349364200E38ADA /* UIView+Identifier.swift in Sources */,
 				6E457E2E2348C25000A3206F /* AppError.swift in Sources */,
+				6E6F161A234A50AF006278A8 /* RecipeDetailPresenter.swift in Sources */,
 				6E9C59832348E7EF00402308 /* AlamofireApiClient.swift in Sources */,
 				6E457E152348BE1B00A3206F /* AppDelegate.swift in Sources */,
 				6EC6A3F82349375100E38ADA /* RecipesListPresenter.swift in Sources */,

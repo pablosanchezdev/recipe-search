@@ -9,10 +9,14 @@
 import Foundation
 
 enum LocalizableString: String {
+    // Recipes list
     case titleLabel = "title_label"
     case searchBarPlaceholder = "search_bar_placeholder"
     case noRecipes = "no_recipes"
     case errorLoadingImage = "error_loading_recipe_image"
+
+    // Recipe detail
+    case webButtonTitle = "web_button_title"
 }
 
 extension LocalizableString {
