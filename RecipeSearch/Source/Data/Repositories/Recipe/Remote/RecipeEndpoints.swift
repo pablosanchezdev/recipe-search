@@ -30,8 +30,8 @@ extension RecipeEndpoints: Endpoint {
         switch self {
         case .search(let mode):
             switch mode {
-            case .by(let name):
-                return "\(baseUrl)/?q=\(name)"
+            case .by(let name, let page):
+                return "\(baseUrl)/?q=\(name)&p=\(page)"
             }
         }
     }

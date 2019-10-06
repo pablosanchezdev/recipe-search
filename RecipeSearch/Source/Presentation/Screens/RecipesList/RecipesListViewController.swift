@@ -72,6 +72,10 @@ extension RecipesListViewController: UICollectionViewDataSource {
         let recipe = recipes[indexPath.row]
         cell.fill(with: recipe)
 
+        if indexPath.row == recipes.count - 1 {  // Last item
+            presenter.didScrollToBottom()
+        }
+
         return cell
     }
 }
@@ -116,6 +120,13 @@ extension RecipesListViewController: RecipesListPresenterDelegate {
 
     func renderRecipes(_ recipes: [RecipeView]) {
         self.recipes = recipes
+        collectionView.isHidden = false
+        messageLabel.isHidden = true
+        collectionView.reloadData()
+    }
+
+    func appendRecipes(_ recipes: [RecipeView]) {
+        self.recipes.append(contentsOf: recipes)
         collectionView.isHidden = false
         messageLabel.isHidden = true
         collectionView.reloadData()

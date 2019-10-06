@@ -9,7 +9,7 @@
 import Foundation
 
 enum RecipeSearchMode {
-    case by(name: String)
+    case by(name: String, page: Int)
 }
 
 protocol RecipeRepository {
