@@ -24,9 +24,11 @@ protocol RecipeDetailPresenterDelegate: class {
 class RecipeDetailPresenter {
     weak var delegate: RecipeDetailPresenterDelegate?
 
+    private let coordinator: RecipeDetailCoordinatorProtocol
     private let recipe: RecipeView
 
-    init(recipe: RecipeView) {
+    init(coordinator: RecipeDetailCoordinatorProtocol, recipe: RecipeView) {
+        self.coordinator = coordinator
         self.recipe = recipe
     }
 }
@@ -41,6 +43,8 @@ extension RecipeDetailPresenter: RecipeDetailPresenterProtocol {
     }
 
     func didTapWebButton() {
-        
+        guard let url = URL(string: recipe.webUrl) else { return }
+
+        coordinator.open(url: url)
     }
 }

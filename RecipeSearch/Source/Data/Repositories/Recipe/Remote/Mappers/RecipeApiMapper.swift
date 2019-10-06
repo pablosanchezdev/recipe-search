@@ -11,6 +11,6 @@ import Foundation
 extension RecipeAPI {
     func toRecipe() -> Recipe {
         let ingredientsArray = ingredients.components(separatedBy: ",")
-        return Recipe(thumbnailUrl: thumbnail, title: title, ingredients: ingredientsArray)
+        return Recipe(thumbnailUrl: thumbnail, title: title, ingredients: ingredientsArray, webUrl: href)
     }
 }

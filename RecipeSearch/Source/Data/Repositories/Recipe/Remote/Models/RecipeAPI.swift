@@ -16,4 +16,5 @@ struct RecipeAPI: Decodable {
     let thumbnail: String
     let title: String
     let ingredients: String
+    let href: String
 }

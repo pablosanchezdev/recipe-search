@@ -12,4 +12,5 @@ struct RecipeView {
     let thumbnailUrl: String
     let title: String
     let ingredients: [String]
+    let webUrl: String
 }

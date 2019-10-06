@@ -10,6 +10,9 @@ import Foundation
 
 struct RecipeViewMapper {
     static func recipeToRecipeView(_ recipe: Recipe) -> RecipeView {
-        return RecipeView(thumbnailUrl: recipe.thumbnailUrl, title: recipe.title, ingredients: recipe.ingredients)
+        return RecipeView(thumbnailUrl: recipe.thumbnailUrl,
+                          title: recipe.title,
+                          ingredients: recipe.ingredients,
+                          webUrl: recipe.webUrl)
     }
 }

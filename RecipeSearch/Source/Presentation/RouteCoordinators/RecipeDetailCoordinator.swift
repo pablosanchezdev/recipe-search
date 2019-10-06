@@ -10,19 +10,26 @@ import UIKit
 
 protocol RecipeDetailCoordinatorProtocol: Coordinable {
     init(recipe: RecipeView)
+    func open(url: URL)
 }
 
 // MARK: - RecipeDetailCoordinatorProtocol
 class RecipeDetailCoordinator: RecipeDetailCoordinatorProtocol {
-    private let recipeDetailViewController: RecipeDetailViewController
+    private var recipeDetailViewController: RecipeDetailViewController!
 
     var rootViewController: UIViewController {
         return recipeDetailViewController
     }
 
     required init(recipe: RecipeView) {
-        let presenter = RecipeDetailPresenter(recipe: recipe)
+        let presenter = RecipeDetailPresenter(coordinator: self, recipe: recipe)
         recipeDetailViewController = RecipeDetailViewController(presenter: presenter)
         presenter.delegate = recipeDetailViewController
+    }
+
+    func open(url: URL) {
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
 }
