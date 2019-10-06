@@ -8,4 +8,5 @@
 
 "title_label" = "Search among the best recipes!";
 "search_bar_placeholder" = "Recipe name...";
-"error_loading_recipe_image" = "Error loading image";
+"no_recipes" = "No recipes to show";
+"error_loading_recipe_image" = "No image";

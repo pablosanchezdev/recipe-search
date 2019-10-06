@@ -22,13 +22,13 @@ class RecipeCell: UICollectionViewCell {
         ingredientsLabel.text = ""
     }
 
-    func fill(with recipe: Recipe) {
+    func fill(with recipe: RecipeView) {
         imageView.sd_setImage(with: thumnailUrl(for: recipe))
         titleLabel.text = recipe.title
         ingredientsLabel.text = recipe.ingredients.joined(separator: ", ")
     }
 
-    private func thumnailUrl(for recipe: Recipe) -> URL {
+    private func thumnailUrl(for recipe: RecipeView) -> URL {
         guard !recipe.thumbnailUrl.isEmpty,
             let url = URL(string: recipe.thumbnailUrl) else {
                 let width = Int(imageView.frame.width)

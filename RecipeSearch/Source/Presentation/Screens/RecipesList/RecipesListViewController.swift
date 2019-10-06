@@ -12,9 +12,10 @@ class RecipesListViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var messageLabel: UILabel!
 
     let presenter: RecipesListPresenterProtocol
-    var recipes: [Recipe] = []
+    var recipes: [RecipeView] = []
 
     init(presenter: RecipesListPresenterProtocol) {
         self.presenter = presenter
@@ -28,21 +29,21 @@ class RecipesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        presenter.viewIsReady()
     }
 
     private func setupViews() {
-        setupTitleLabel()
         setupSearchBar()
+        setupErrorLabel()
         setupCollectionView()
     }
 
-    private func setupTitleLabel() {
-        titleLabel.text = LocalizableString.titleLabel.localized()
+    private func setupSearchBar() {
+        searchBar.delegate = self
     }
 
-    private func setupSearchBar() {
-        searchBar.placeholder = LocalizableString.searchBarPlaceholder.localized()
-        searchBar.delegate = self
+    private func setupErrorLabel() {
+        messageLabel.isHidden = false
     }
 
     private func setupCollectionView() {
@@ -55,6 +56,8 @@ class RecipesListViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        collectionView.isHidden = true
     }
 }
 
@@ -90,12 +93,24 @@ extension RecipesListViewController: UISearchBarDelegate {
 
 // MARK: - RecipesListPresenterDelegate
 extension RecipesListViewController: RecipesListPresenterDelegate {
-    func renderRecipes(_ recipes: [Recipe]) {
-        self.recipes = recipes
-        collectionView.reloadData()
+    func setTitle(_ title: String) {
+        titleLabel.text = title
+    }
+    
+    func setSearchBarPlaceholder(_ placeholder: String) {
+        searchBar.placeholder = placeholder
     }
 
-    func showError(_ error: String) {
+    func showMessage(_ message: String) {
+        collectionView.isHidden = true
+        messageLabel.isHidden = false
+        messageLabel.text = message
+    }
 
+    func renderRecipes(_ recipes: [RecipeView]) {
+        self.recipes = recipes
+        collectionView.isHidden = false
+        messageLabel.isHidden = true
+        collectionView.reloadData()
     }
 }

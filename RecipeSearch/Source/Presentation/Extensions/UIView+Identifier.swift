@@ -12,7 +12,7 @@ protocol ReuseIdentifier {
     static var reuseIdentifier: String { get }
 }
 
-/// Ads to any view an identifier which is its name
+/// Ads to any view an identifier which consists of its name
 extension ReuseIdentifier where Self: UIView {
     static var reuseIdentifier: String {
         return String(describing: self)

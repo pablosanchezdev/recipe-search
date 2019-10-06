@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipesListViewController" customModule="RecipeSearch" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="PHu-oY-okX" id="YSR-pP-ykS"/>
+                <outlet property="messageLabel" destination="rIT-X6-2Fg" id="WWV-cZ-YnC"/>
                 <outlet property="searchBar" destination="Qxc-US-vCp" id="iWE-Vl-QSF"/>
                 <outlet property="titleLabel" destination="cSV-bO-tkv" id="vJT-aH-PLx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,6 +34,12 @@
                     <rect key="frame" x="0.0" y="92" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIT-X6-2Fg" userLabel="Message Label">
+                    <rect key="frame" x="207" y="522" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PHu-oY-okX" userLabel="Recipes Collection View">
                     <rect key="frame" x="0.0" y="148" width="414" height="748"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,11 +58,13 @@
                 <constraint firstItem="PHu-oY-okX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8wj-WV-iTt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cSV-bO-tkv" secondAttribute="trailing" constant="12" id="EpC-yB-Cvp"/>
                 <constraint firstItem="Qxc-US-vCp" firstAttribute="top" secondItem="cSV-bO-tkv" secondAttribute="bottom" constant="12" id="LSp-LS-jAK"/>
+                <constraint firstItem="rIT-X6-2Fg" firstAttribute="centerY" secondItem="PHu-oY-okX" secondAttribute="centerY" id="URd-RY-Uty"/>
                 <constraint firstItem="PHu-oY-okX" firstAttribute="top" secondItem="Qxc-US-vCp" secondAttribute="bottom" id="gnH-Mk-zBL"/>
                 <constraint firstItem="Qxc-US-vCp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mr0-fF-pmp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PHu-oY-okX" secondAttribute="trailing" id="n1U-VL-286"/>
                 <constraint firstItem="cSV-bO-tkv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="sUW-gT-i9U"/>
                 <constraint firstItem="cSV-bO-tkv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="tvD-pV-3tn"/>
+                <constraint firstItem="rIT-X6-2Fg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tvJ-5O-jiB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
