@@ -9,9 +9,9 @@
 import UIKit
 
 class RecipesListViewController: UIViewController {
-    @IBOutlet weak private var searchBar: UISearchBar!
-    @IBOutlet weak private var collectionView: UICollectionView!
-    @IBOutlet weak private var messageLabel: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var messageLabel: UILabel!
 
     let presenter: RecipesListPresenterProtocol
     var recipes: [RecipeView] = []
@@ -33,16 +33,11 @@ class RecipesListViewController: UIViewController {
 
     private func setupViews() {
         setupSearchBar()
-        setupErrorLabel()
         setupCollectionView()
     }
 
     private func setupSearchBar() {
         searchBar.delegate = self
-    }
-
-    private func setupErrorLabel() {
-        messageLabel.isHidden = false
     }
 
     private func setupCollectionView() {

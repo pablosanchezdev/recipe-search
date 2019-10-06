@@ -59,13 +59,12 @@ extension RecipesListPresenter: RecipesListPresenterProtocol {
                 self.delegate?.showMessage(error.localizedDescription)
             }
 
-            if let recipes = recipes {
-                if recipes.count > 0 {
-                    let recipesView = recipes.map { RecipeViewMapper.recipeToRecipeView($0) }
-                    self.delegate?.renderRecipes(recipesView)
-                } else {
-                    self.delegate?.showMessage(LocalizableString.noRecipes.localized())
-                }
+            if let recipes = recipes,
+                recipes.count > 0 {
+                let recipesView = recipes.map { RecipeViewMapper.recipeToRecipeView($0) }
+                self.delegate?.renderRecipes(recipesView)
+            } else {
+                self.delegate?.showMessage(LocalizableString.noRecipes.localized())
             }
         }
     }
@@ -77,11 +76,10 @@ extension RecipesListPresenter: RecipesListPresenterProtocol {
                 self.delegate?.showMessage(error.localizedDescription)
             }
 
-            if let recipes = recipes {
-                if recipes.count > 0 {
-                    let recipesView = recipes.map { RecipeViewMapper.recipeToRecipeView($0) }
-                    self.delegate?.appendRecipes(recipesView)
-                }
+            if let recipes = recipes,
+                recipes.count > 0 {
+                let recipesView = recipes.map { RecipeViewMapper.recipeToRecipeView($0) }
+                self.delegate?.appendRecipes(recipesView)
             }
         }
     }

@@ -1,19 +1,20 @@
 //
-//  RemoteRecipeRepository.swift
-//  RecipeSearch
+//  MockRemoteRecipeRepository.swift
+//  RecipeSearchTests
 //
-//  Created by Pablo Sanchez Egido on 05/10/2019.
+//  Created by Pablo Sanchez Egido on 06/10/2019.
 //  Copyright © 2019 Pablo Sanchez. All rights reserved.
 //
 
 import Foundation
+@testable import RecipeSearch
 
-struct RemoteRecipeRepository: RecipeRepository {
+struct MockRemoteRecipeRepository: RecipeRepository {
     let apiClient: ApiClient
     let decoder: AppDecoder
     
     func searchRecipes(for mode: RecipeSearchMode, completion: @escaping ([Recipe]?, Error?) -> Void) {
-        let endpoint = RecipeEndpoints.search(mode)
+        let endpoint = MockRecipeEndpoints.search(mode)
         apiClient.makeRequest(to: endpoint) { (result) in
             switch result {
             case .success(let value):
@@ -31,7 +32,7 @@ struct RemoteRecipeRepository: RecipeRepository {
     }
 }
 
-extension RemoteRecipeRepository {
+extension MockRemoteRecipeRepository {
     private func handleResponse(_ response: Any) throws -> [RecipeAPI] {
         do {
             let result = try decoder.decode(response, as: ResultsAPI.self)

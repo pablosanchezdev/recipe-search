@@ -1,0 +1,67 @@
+{
+   "title":"Recipe Puppy",
+   "version":0.1,
+   "href":"http:\/\/www.recipepuppy.com\/",
+   "results":[
+      {
+         "title":"Magic Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Magic-Omelette-237789",
+         "ingredients":"butter, cheese, chives, eggs, ham, black pepper, salt, water",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/102267.jpg"
+      },
+      {
+         "title":"Crappy Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Crappy-Omelette-347713",
+         "ingredients":"milk, eggs, onions, spam",
+         "thumbnail":""
+      },
+      {
+         "title":"Truffle Omelette - Omelette Aux Truffes",
+         "href":"http:\/\/www.recipezaar.com\/Truffle-Omelette-Omelette-Aux-Truffes-229713",
+         "ingredients":"butter, cream, eggs, salt",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/744490.jpg"
+      },
+      {
+         "title":"Shrimps And Peas Omelette Recipe",
+         "href":"http:\/\/www.grouprecipes.com\/8132\/shrimps-and-peas-omelette.html",
+         "ingredients":"black pepper, eggs, peas, shrimp, soy sauce, vegetable oil",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/386573.jpg"
+      },
+      {
+         "title":"Egg White Puffy Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Egg-White-Puffy-Omelette-210494",
+         "ingredients":"egg whites, eggs, salt, cheddar cheese, water, water, white pepper",
+         "thumbnail":""
+      },
+      {
+         "title":"Fat Free Delicious Omelette!",
+         "href":"http:\/\/www.recipezaar.com\/Fat-Free-Delicious-Omelette-49270",
+         "ingredients":"nonstick cooking spray, tomato, egg substitute, cheddar cheese, green pepper, onions",
+         "thumbnail":""
+      },
+      {
+         "title":"Spanish Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Spanish-Omelette-341125",
+         "ingredients":"cheddar cheese, parsley, eggs, green pepper, onions, potato, salt, vegetable oil",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/33241.jpg"
+      },
+      {
+         "title":"Norwegian Baked Cheese Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Norwegian-Baked-Cheese-Omelette-322651",
+         "ingredients":"butter, ham, eggs, cheese, parsley, red pepper, salt, water, green onion",
+         "thumbnail":""
+      },
+      {
+         "title":"Spanish Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Spanish-Omelette-230338",
+         "ingredients":"eggs, olive oil, onions, potato, salt",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/35631.jpg"
+      },
+      {
+         "title":"Chinese-style Omelette",
+         "href":"http:\/\/www.recipezaar.com\/Chinese-style-Omelette-90642",
+         "ingredients":"eggs, cilantro, green onion, oyster sauce, vegetable oil, salt, water",
+         "thumbnail":"http:\/\/img.recipepuppy.com\/39896.jpg"
+      }
+   ]
+}
