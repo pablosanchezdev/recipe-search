@@ -13,14 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let decoder = AppJsonDecoder()
-        let client = AlamofireApiClient()
-        let repo = RemoteRecipeRepository(apiClient: client, decoder: decoder)
-        let presenter = RecipesListPresenter(repository: repo)
-        let vc = RecipesListViewController(presenter: presenter)
-        presenter.delegate = vc
+        let rootCoordinator: Coordinable = RecipesListCoordinator()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = vc
+        window?.rootViewController = rootCoordinator.rootViewController
         window?.makeKeyAndVisible()
 
         return true

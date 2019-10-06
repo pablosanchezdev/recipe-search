@@ -9,7 +9,6 @@
 import UIKit
 
 class RecipesListViewController: UIViewController {
-    @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var searchBar: UISearchBar!
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak private var messageLabel: UILabel!
@@ -77,6 +76,14 @@ extension RecipesListViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+extension RecipesListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let recipeSelected = recipes[indexPath.row]
+        presenter.didSelect(recipe: recipeSelected)
+    }
+}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 extension RecipesListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -94,7 +101,7 @@ extension RecipesListViewController: UISearchBarDelegate {
 // MARK: - RecipesListPresenterDelegate
 extension RecipesListViewController: RecipesListPresenterDelegate {
     func setTitle(_ title: String) {
-        titleLabel.text = title
+        self.title = title
     }
     
     func setSearchBarPlaceholder(_ placeholder: String) {

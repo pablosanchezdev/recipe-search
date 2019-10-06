@@ -26,6 +26,11 @@ class RecipeDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.viewIsReady()
+    }
+
     @IBAction func didTapWebButton() {
         presenter.didTapWebButton()
     }

@@ -12,6 +12,7 @@ protocol RecipesListPresenterProtocol {
     var delegate: RecipesListPresenterDelegate? { get set }
     func viewIsReady()
     func queryDidChange(_ query: String)
+    func didSelect(recipe: RecipeView)
 }
 
 protocol RecipesListPresenterDelegate: class {
@@ -24,9 +25,11 @@ protocol RecipesListPresenterDelegate: class {
 class RecipesListPresenter {
     weak var delegate: RecipesListPresenterDelegate?
 
+    private let coordinator: RecipesListCoordinatorProtocol
     private let repository: RecipeRepository
 
-    init(repository: RecipeRepository) {
+    init(coordinator: RecipesListCoordinatorProtocol, repository: RecipeRepository) {
+        self.coordinator = coordinator
         self.repository = repository
     }
 }
@@ -58,5 +61,9 @@ extension RecipesListPresenter: RecipesListPresenterProtocol {
                 }
             }
         }
+    }
+
+    func didSelect(recipe: RecipeView) {
+        coordinator.didSelect(recipe: recipe)
     }
 }
