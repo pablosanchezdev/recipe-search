@@ -29,6 +29,8 @@
 		6E6F161D234A5C3F006278A8 /* RecipesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F161C234A5C3F006278A8 /* RecipesListCoordinator.swift */; };
 		6E6F1621234A5FE5006278A8 /* RecipeDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1620234A5FE5006278A8 /* RecipeDetailCoordinator.swift */; };
 		6E6F1623234A6045006278A8 /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1622234A6045006278A8 /* Coordinable.swift */; };
+		6E6F1627234A6840006278A8 /* SwinjectAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1626234A6840006278A8 /* SwinjectAssembly.swift */; };
+		6E6F1629234A6888006278A8 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F1628234A6888006278A8 /* Assembly.swift */; };
 		6E9C59832348E7EF00402308 /* AlamofireApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9C59822348E7EF00402308 /* AlamofireApiClient.swift */; };
 		6EC6A3D92348F62800E38ADA /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6A3D82348F62800E38ADA /* AppConfig.swift */; };
 		6EC6A3DC2348F6A300E38ADA /* String+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC6A3DB2348F6A300E38ADA /* String+Plist.swift */; };
@@ -67,6 +69,8 @@
 		6E6F161C234A5C3F006278A8 /* RecipesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListCoordinator.swift; sourceTree = "<group>"; };
 		6E6F1620234A5FE5006278A8 /* RecipeDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailCoordinator.swift; sourceTree = "<group>"; };
 		6E6F1622234A6045006278A8 /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
+		6E6F1626234A6840006278A8 /* SwinjectAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectAssembly.swift; sourceTree = "<group>"; };
+		6E6F1628234A6888006278A8 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		6E9C59822348E7EF00402308 /* AlamofireApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireApiClient.swift; sourceTree = "<group>"; };
 		6EC6A3D82348F62800E38ADA /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		6EC6A3DB2348F6A300E38ADA /* String+Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Plist.swift"; sourceTree = "<group>"; };
@@ -295,6 +299,15 @@
 			path = RouteCoordinators;
 			sourceTree = "<group>";
 		};
+		6E6F1625234A681B006278A8 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				6E6F1628234A6888006278A8 /* Assembly.swift */,
+				6E6F1626234A6840006278A8 /* SwinjectAssembly.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		6E9C59812348E7DE00402308 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				6E457E142348BE1B00A3206F /* AppDelegate.swift */,
+				6E6F1625234A681B006278A8 /* DI */,
 				6E6F161B234A5C27006278A8 /* RouteCoordinators */,
 				6EC6A3DD2348F9E000E38ADA /* Launch */,
 				6EC6A3DF2348FA5F00E38ADA /* Screens */,
@@ -500,6 +514,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E6F1627234A6840006278A8 /* SwinjectAssembly.swift in Sources */,
+				6E6F1629234A6888006278A8 /* Assembly.swift in Sources */,
 				6EC6A3E22348FA8400E38ADA /* RecipesListViewController.swift in Sources */,
 				6E457E302348C25A00A3206F /* Recipe.swift in Sources */,
 				6E457E522348E42000A3206F /* AppJsonDecoder.swift in Sources */,

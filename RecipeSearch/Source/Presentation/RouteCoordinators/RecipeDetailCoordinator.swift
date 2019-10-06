@@ -15,6 +15,7 @@ protocol RecipeDetailCoordinatorProtocol: Coordinable {
 
 // MARK: - RecipeDetailCoordinatorProtocol
 class RecipeDetailCoordinator: RecipeDetailCoordinatorProtocol {
+    private let recipe: RecipeView
     private var recipeDetailViewController: RecipeDetailViewController!
 
     var rootViewController: UIViewController {
@@ -22,9 +23,11 @@ class RecipeDetailCoordinator: RecipeDetailCoordinatorProtocol {
     }
 
     required init(recipe: RecipeView) {
-        let presenter = RecipeDetailPresenter(coordinator: self, recipe: recipe)
-        recipeDetailViewController = RecipeDetailViewController(presenter: presenter)
-        presenter.delegate = recipeDetailViewController
+        self.recipe = recipe
+    }
+
+    func start() {
+        recipeDetailViewController = assembly.recipeDetailViewController()
     }
 
     func open(url: URL) {

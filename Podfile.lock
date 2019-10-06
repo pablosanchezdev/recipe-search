@@ -3,20 +3,24 @@ PODS:
   - SDWebImage (5.2.2):
     - SDWebImage/Core (= 5.2.2)
   - SDWebImage/Core (5.2.2)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Alamofire
   - SDWebImage (~> 5.0)
+  - Swinject
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SDWebImage
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 4bfd6155152dc3066106e34fd2f4fff976bedeb7
+PODFILE CHECKSUM: 290be521545368bf782b38d2cc7296c9a408fd72
 
 COCOAPODS: 1.8.3

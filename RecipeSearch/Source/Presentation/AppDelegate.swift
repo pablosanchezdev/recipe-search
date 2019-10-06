@@ -13,9 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let rootCoordinator: Coordinable = RecipesListCoordinator()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootCoordinator.rootViewController
+        window?.rootViewController = assembly.recipesListCoordinator().rootViewController
         window?.makeKeyAndVisible()
 
         return true

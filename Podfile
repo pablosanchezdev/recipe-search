@@ -6,6 +6,7 @@ target 'RecipeSearch' do
   use_frameworks!
 
   # Pods for RecipeSearch
+  pod 'Swinject'
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'
 end

@@ -10,4 +10,5 @@ import UIKit
 
 protocol Coordinable {
     var rootViewController: UIViewController { get }
+    func start()
 }
